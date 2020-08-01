@@ -1,0 +1,33 @@
+[
+  {
+    "icon": "fa fa-home",
+    "slug": "external",
+    "title": "Volver al Inicio",
+    "path": "index.html"
+  },  
+  { 
+    "id": 1,
+    "icon": "fa fa-file-text-o",
+    "slug": "normativa_vigente",
+    "title": "1. Normatividad vigente y conceptos técnicos.",
+    "breadcrumb": ["Inicio","tema1"],
+    "path": "pages/tema-1.html"    
+  },
+
+  {
+    "id": 2,
+    "icon": "fa fa-file-text-o",
+    "slug": "caracterizacion_productos",
+    "title": "2. Caracterización de productos de dotación hospitalaria.",
+    "breadcrumb": ["Inicio", "Tema 2"],
+    "path": "pages/tema-2.html"
+  },
+  {
+    "id": 3,
+    "icon": "fa fa-file-text-o",
+    "slug": "materias_primas_insumos",
+    "title": "3. Materias primas e insumos para dotación hospitalaria",
+    "breadcrumb": ["Inicio", "Tema 3"],
+    "path": "pages/tema-3.html"    
+  }  
+]

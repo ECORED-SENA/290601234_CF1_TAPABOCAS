@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import 'base/variables';
+@import './vendor/dashkit/variables';
+@import 'base/tema-curso';
+@import './vendor/bootstrap';
+@import './vendor/dashkit/dashkit';
+
+@import 'base/base';
+@import 'base/helpers';
+
+@import 'layout/divider';
+@import 'layout/header';
+@import 'layout/home-topbar';
+@import 'layout/home-body';
+@import 'layout/page-main';
+@import 'layout/aside-contenidos';
+@import 'layout/footer';
+
+@import 'modulos/buttons';
+@import 'modulos/blockquote';
+@import 'modulos/table';
+@import 'modulos/header-step';
+@import 'modulos/header-arrow';
+@import 'modulos/media-link';
+@import 'modulos/cards';
+@import 'modulos/card-media';
+@import 'modulos/custom-btns';
+@import 'modulos/nav-tabs';
+@import 'modulos/btn-menu-responsive';
+@import 'modulos/question';
+@import 'modulos/slider-bs';
+@import 'modulos/glossary';
+@import 'modulos/timeline';
+@import 'modulos/quote';
+
+@import 'pages/custom';

@@ -1,0 +1,42 @@
+.footer {
+    background-color: $gray-400;
+    padding: 3rem 0 3rem 0;
+
+
+    .footer-subtitulo {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 1rem 0 2rem 0;
+        text-transform: uppercase;
+
+        .fa {
+            font-size: 1rem;
+        }
+    }
+
+    .footer-subtitulo-2 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 1rem 0;
+        text-transform: uppercase;
+
+        .fa {
+            font-size: 1rem;
+        }
+    }
+
+    .footer-texto {
+        font-size: 14px;
+    }
+}
+
+#cc {
+    padding: 1rem 0;
+    margin: 0;
+    font-size: 13px;
+
+    .icon {
+        width: 80px;
+        height: 35px;
+    }
+}

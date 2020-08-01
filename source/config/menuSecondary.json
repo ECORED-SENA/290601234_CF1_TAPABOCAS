@@ -1,0 +1,27 @@
+[
+    {
+        "icon": "fa fa-sort-alpha-asc",
+        "slug": "glosario",
+        "title": "Glosario",
+        "path": "pages/glosario.html"
+    },   
+    {
+        "icon": "fa fa-folder-open",
+        "slug": "material-complementario",
+        "title": "Material complementario",
+        "path": "pages/material-complementario.html"
+    },    
+    {
+        "icon": "fa fa-book",
+        "slug": "referencias",
+        "title": "Referencias bibliográficas",
+        "breadcrumb": ["Referencias bibliográficas"],
+        "path": "pages/referencias.html"
+    },
+    {
+        "icon": "fa fa-download",
+        "slug": "external",
+        "title": "Descargar material",
+        "path": "download/material.zip"
+    }    
+]

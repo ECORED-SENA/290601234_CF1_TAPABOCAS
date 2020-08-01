@@ -1,0 +1,196 @@
+
+.bg-brand-color-dark {
+    background-color: $brand-color-dark !important;    
+}
+
+.bg-brand-color-dark-light {
+    background-color: lighten($brand-color-dark, 10%) !important;    
+}
+
+.bg-brand-color-light {
+    background-color: $brand-color-light !important;    
+}
+
+.bg-brand-color-light-more {
+    background-color: lighten($brand-color-light,10%) !important;    
+}
+
+.bg-brand-color-secondary {
+    background-color: $brand-color-secondary !important;
+}
+
+.bg-danger {
+    background-color: #E64663 !important;    
+}
+
+.bg-base-light {
+    background-color: $base-color-light !important;
+}
+
+.bg-orange {
+    background-color: $dark-orange !important;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-small {
+    font-size: .85em;
+}
+
+.text-color-primary {
+    color: $primary;
+}
+
+.text-color-orange {
+    color:  $dark-orange !important;
+}
+.bg-color-orange {
+    color:  $dark-orange !important;
+}
+
+.text-brand-color-dark {
+    color: $brand-color-dark !important;   
+}
+
+.text-brand-color-light {
+    color: $brand-color-light !important;   
+}
+
+.base-light-font-weight {
+    font-weight: $base-light-font-weight;
+}
+
+.base-medium-font-weight {
+    font-weight: $base-medium-font-weight;
+}
+
+.base-bold-font-weight {
+    font-weight: $base-bold-font-weight;
+}
+
+
+.border-bottom-brand-color-dark {
+    border-bottom: 10px solid $brand-color-dark;    
+}
+
+.letter-spacing-1x {
+    letter-spacing: 0.3px;
+}
+
+.border-color-brand-color-dark {
+    border-color: $brand-color-dark;    
+}
+.border-color-primary {
+    border-color: $primary;    
+}
+.border-color-orange {
+    border-color: $dark-orange;
+}
+.border-color-brand-color-ligth {
+    border-color: $brand-color-light;    
+}
+
+
+.img-container {  
+  figure {     
+    width: 100%;     
+    img {              
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+
+.icon {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 15px 0px 0px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    &.glosario {
+        background-image: url('../images/icons/icon_glosario.svg');
+    }       
+    &.referencias {
+        background-image: url('../images/icons/icon_libros.svg');
+    }       
+    &.btnclose {
+        background-image: url('../images/icons/icon_close.svg');
+    }    
+    &.bars {
+        background-image: url('../images/icons/icon_nav.svg');
+    }
+    &.bibliography {
+        background-image: url('../images/icons/icon_bibliography.svg');
+    }
+    &.cc {
+        background-image: url('../images/icons/icon_cc.svg');
+    }
+    &.chevron {
+        background-image: url('../images/icons/icon_chevron.svg');
+    }
+    &.document {
+        background-image: url('../images/icons/icon_document.svg');
+    }
+    &.documents {
+        background-image: url('../images/icons/icon_documents.svg');
+    }
+    &.downloadPdf {
+        background-image: url('../images/icons/icon_downloadPdf.svg');
+    }
+    &.game {
+        background-image: url('../images/icons/icon_game.svg');
+    }
+    &.glossary {
+        background-image: url('../images/icons/icon_glosary.svg');
+    }
+    &.index {
+        background-image: url('../images/icons/icon_index.svg');
+    }
+    &.pdf {
+        background-image: url('../images/icons/icon_pdf.svg');
+    }
+    &.reference {
+        background-image: url('../images/icons/icon_reference.svg');
+        width: 40px;
+        height: 40px;
+    }
+    &.sena {
+        background-image: url('../images/icons/icon_sena.svg');
+    }
+    &.tablePdf {
+        background-image: url('../images/icons/icon_table_pdf.svg');
+    }
+    &.tableVideo {
+        background-image: url('../images/icons/icon_table_video.svg');
+    }
+    &.tableWeb {
+        background-image: url('../images/icons/icon_table_web.svg');
+    }
+    &.video {
+        background-image: url('../images/icons/icon_video.svg');
+    }
+}
+
+.menu-secondary {
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .fa {
+        font-size: 24px;
+        margin-right: 15px;
+    }
+}

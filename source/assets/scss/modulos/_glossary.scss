@@ -1,0 +1,45 @@
+table.glossary {
+
+    width: 100%;
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 28px;
+    
+    thead {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 20px;
+        top: -8px;        
+        padding: 7px;
+        background: $body-bg;
+        color: $base-color;
+    }
+    
+    tbody {
+        border-left: 1px solid $gray-400;
+        display: grid;
+        padding-left: 30px;
+        margin-left: 15px;
+        tr {
+            margin: 10px 0;
+        }
+    }
+    
+    td {
+        width: 100%;
+        display: block;
+        &:nth-child(1) {
+            font-weight: 600;
+            border-bottom: 1px solid $gray-700;
+            //padding-bottom: 28px;
+            margin-bottom: 14px;
+        }
+    }
+    tr {
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+    }
+}

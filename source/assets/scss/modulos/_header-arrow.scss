@@ -1,0 +1,32 @@
+.header-arrow {
+  position: relative;
+  background-color: $brand-color-secondary;
+  padding: 2rem;
+
+  h1,h2,h3 {
+      margin: 0;
+      color: $white;      
+  }
+
+  &--xs {
+    padding: 0;
+    height: 8px;
+  }
+
+}
+
+.header-arrow::before {
+   content: '';
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    border-style: solid;
+    border-width: 25px 25px 0px 25px;
+    border-color:  $brand-color-secondary transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -18px;
+    margin-top: 0px; 
+    z-index: 20;
+}
+

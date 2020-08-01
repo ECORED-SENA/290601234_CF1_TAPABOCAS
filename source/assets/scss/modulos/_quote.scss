@@ -1,0 +1,29 @@
+$quote_bar_color: #CBD9E4;
+$quote_icon_color: #3A4650;
+
+.quote {  
+  position: relative;
+  &__bar {    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;  
+    &__icon {      
+      width: 35px;
+      margin: 0 0.5rem;
+      img {
+        width: 35px;
+        vertical-align: middle;
+      }
+    }
+    &__hr {      
+      width: 100%;
+      height: 5px;
+      background-color: $quote_bar_color;
+    }
+  }
+  &__text {
+    padding: 0.25rem 3rem;
+  }
+}

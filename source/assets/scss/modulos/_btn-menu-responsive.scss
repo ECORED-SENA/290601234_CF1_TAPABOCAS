@@ -1,0 +1,68 @@
+.btn-menu-responsive {
+
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background: white;
+
+    span {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: $black;
+        transition: transform .4s ease-in-out;
+
+        &:first-child {
+            transform: translateY(-7px);
+        }
+        &:last-child {
+            transform: translateY(7px);
+        }
+    }
+
+
+    &.active span {
+
+        &:nth-child(2) {
+            transform: scaleX(0);
+        }
+
+        &:first-child {
+            transform: rotate(45deg) translate(0);
+        }
+
+        &:last-child {
+            transform: rotate(-45deg) translate(0);
+        }
+        
+    }
+}
+
+.btn-menu-close {
+    position: relative;
+    width: 48px;
+    height: 48px;
+
+    span {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: $black;
+        transition: transform .4s ease-in-out;
+
+        &:first-child {
+            transform: rotate(45deg) translate(0);
+        }
+
+        &:last-child {
+            transform: rotate(-45deg) translate(0);
+        }
+    }
+
+}

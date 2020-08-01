@@ -1,0 +1,77 @@
+include mixins/functions
+
+doctype
+html(lang="es")
+    head
+        include includes/head.pug
+
+
+    body#page-home.theme-dark.page-header-textura
+
+        header#CursoPresentacion.curso-presentacion.page-header
+            .page-textura
+                .container
+
+                    include includes/page-home_topbar.pug
+
+                    +pageHeader("Tema", "assets/images/header/header_media.svg", "")   
+
+        section#ResultadosAprendizaje.curso-resultados.section.bg-base-light
+
+            .container
+
+                include includes/page-home_resultados.pug  
+
+        section#IndiceTematico.curso-indice-tematico.section
+
+            .container
+
+                h2 Desarrollo de <br>contenidos
+                .brand-line-primary
+
+                .row.justify-content-center
+                    .col-12.col-sm-10
+                        .card.wow.flipInX(data-wow-delay=".4s")
+                            
+                            .card-body
+
+                                ul.list-group.list-group-flush.list.my-n3.nav-temas
+                                    +navTemaItem('1', 'Investigación de mercados', '#tema-1')
+                                    +navTemaItem('2', 'Tipos de investigación de mercados.', '#tema-2')
+                                    +navTemaItem('3', 'Especificación de Diseño de Producto PDS', '#tema-3')
+                                    +navTemaItem('question', 'Actividad didáctica', '#evaluacion')
+                                    +navTemaItem('glosary', 'Glosario', '#glosario')
+                                    +navTemaItem('folder', 'Material complementario', '#anexos')
+                                    +navTemaItem('references', 'Referencias bibliográficas', '#referencias')
+
+
+        section#mainContent         
+            #tema-1
+                include pages/tema-1.pug         
+            #tema-2
+                include pages/tema-2.pug         
+            #tema-3
+                include pages/tema-3.pug
+            #evaluacion
+                include pages/actividad-1.pug
+            #glosario
+                include pages/glosario.pug
+            #anexos
+                include pages/material-complementario.pug
+            #referencias
+                include pages/referencias.pug
+
+
+        +creditosFooter("assets/images/logos/senaLogo.svg")
+
+
+        a.scroll-to-top-btn
+            .fa.fa-angle-up.fa-2x
+
+        script(src="assets/js/vendor.js")
+        script(src="js/local.js")
+
+
+
+
+

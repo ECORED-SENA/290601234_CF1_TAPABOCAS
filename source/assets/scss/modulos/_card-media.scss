@@ -1,0 +1,57 @@
+.card-media {
+  position: relative;
+  padding: 3rem 3rem 3rem 5rem;
+  margin: 1rem 0;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  background-color: #CBEEFF; 
+  &__body {     
+    .card__figure {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%,-50%);
+      width: 120px;      
+      img {
+        width:120px;
+        vertical-align: center;
+      }
+    }     
+    .card__copy{
+      margin: 0;
+    }
+  }
+}
+
+
+//Tamaño personalizado imagen tarjeta
+.large-imgSize {
+  width: 200px !important;
+}
+
+
+@media (max-width: 768px) {
+  .card-media {
+    position: relative;
+    padding: 5rem 2rem 2rem 2rem;
+    margin: 3rem 0;    
+    &__body {     
+      .card__figure {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-width: 120px;      
+        img {
+          width: 100%;
+        }
+      }     
+      .card__copy{
+        margin: 0;
+      }
+    }
+  } 
+}

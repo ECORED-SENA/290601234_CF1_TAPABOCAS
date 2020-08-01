@@ -1,0 +1,168 @@
+// 
+// variables.scss
+// Extended from Bootstrap
+//
+// 
+// Bootstrap Overrides ===================================
+//
+
+$gray-100: #F9FBFD;
+$gray-200: #EDF2F9; //light-base
+$gray-300: #E3EBF6;
+$gray-400: #D2DDEC;
+$gray-500: #B1C2D9;
+$gray-600: #95AAC9;
+$gray-700: #6E84A3;
+$gray-800: #3B506C; //base-color
+$gray-900: #283E59;
+
+$gray-600-dark: #244166;
+$gray-700-dark: #1E3A5C;
+$gray-800-dark: #152E4D;
+$gray-900-dark: #132A46;
+$black-dark: #12263F;
+
+// GrayScale
+$black: #000;
+$darkest-gray: lighten($black, 10%);
+$darker-gray: lighten($black, 20%);
+$darken-gray: lighten($black, 30%);
+$dark-gray: lighten($black, 40%);
+$gray: lighten($black, 50%);
+$light-gray: lighten($black, 60%);
+$lighten-gray: lighten($black, 70%);
+$lighter-gray: lighten($black, 80%);
+$lightest-gray: lighten($black, 90%);
+$white: #fff;
+
+$blue: #2C7BE5;
+$indigo: #727cf5; // NOT USED
+$purple: #6b5eae;
+$pink: #ff679b; // NOT USED
+$red: #E63757;
+$orange: #fd7e14; // NOT USED
+$yellow: #F6C343;
+$green: #00D97E;
+$teal: #02a8b5; // NOT USED
+$cyan: #39afd1; // NOT USED
+
+
+//
+// 
+// Colores Plantilla Curso SENA ===================================
+//
+
+
+//Colores base curso sena
+$dark-blue: #00223D;
+$dark-orange:#ff8f00;
+
+$primary: $black-dark;
+$secondary: $gray-700;
+$success: #00A99A;
+$info: $cyan;
+$warning: $dark-orange;
+$danger: $red;
+$light: $gray-200;
+$dark: $black;
+
+
+$base-color: $black-dark;
+$base-color-dark:$black-dark;
+$base-color-light: #F3F7FA;
+$base-color-highlight: $dark-orange;
+$base-color-gray: #CBD9E4;
+
+// Validation states Colors
+$color-success: lighten(#00A99A, 10%);
+$color-info: lighten($info, 15%);
+$color-warning: lighten($dark-orange, 15%);
+$color-danger: desaturate($red, 15%);
+
+// Font Colors
+$base-font-color: $base-color;
+$paragraph-color: $dark-gray;
+$heading-color: $dark-gray;
+
+// Links Colors
+$action-color: $blue;
+$link-color: $action-color;
+$link-hover-color: darken($action-color, 25%);
+
+// Selection Colors
+$selection-color: $blue;
+$selection-font-color: $white;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $base-color-light !default;
+$body-color: $base-color !default;
+
+// Typography -----------------------------------------------------
+
+// ---
+// FONTS
+// ---
+$font-family-heading:      "Cerebri Sans", sans-serif;
+$font-family-sans-serif:   "Cerebri Sans", sans-serif;
+$font-family-monospace:    "Courier New", monospace !default;
+$font-family-base:          $font-family-sans-serif !default;
+
+$text-font-stack: $font-family-heading;
+$content-font-stack: $font-family-sans-serif;
+
+$base-light-font-weight: 100;
+$base-medium-font-weight: 400;
+$base-bold-font-weight: 700;
+
+$base-font-family: $font-family-sans-serif;
+$base-font-size: 100%;
+$base-font-weight: $base-medium-font-weight;
+$base-line-height: 1.25;
+
+$heading-font-family: $font-family-heading;
+$heading-font-weight: $base-bold-font-weight;
+$heading-line-height: $base-line-height;
+
+$code-font-family: $font-family-monospace;
+
+$h1-font-size: 1.625rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.0625rem;
+$h4-font-size: 0.9375rem;
+$h5-font-size: 0.8125rem;
+$h6-font-size: 0.625rem;
+
+$paragraph-font-family: $base-font-family;
+$paragraph-font-size: $base-font-size;
+$paragraph-font-weight: $base-font-weight;
+$paragraph-line-height: $base-line-height;
+
+// Links -----------------------------------------------------
+$link-font-family: $base-font-family;
+$link-font-size: $base-font-size;
+$link-font-weight: $base-font-weight;
+
+$label-font-size: $base-font-size;
+$label-font-family: $base-font-family;
+$label-font-weight: $heading-font-weight;
+
+// Breadcrumb -----------------------------------------------------
+$breadcrumb-bg: #DBE4ED !default;
+$breadcrumb-divider-color: $gray-400 !default;
+$breadcrumb-active-color: $gray-600 !default;
+$breadcrumb-divider: "" !default;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// ---
+// BREAKPOINTS
+// ---
+$breakpoint-desktop: 1200px;
+$breakpoint-laptop: 950px;
+$breakpoint-tablet: 768px;
+$breakpoint-small: 576px;
+$breakpoint-mobile: 400px;

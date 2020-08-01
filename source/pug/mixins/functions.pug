@@ -1,0 +1,314 @@
+mixin pageHeader(tituloTema, srcImagen, pagina)
+
+    .curso-portada
+
+        .row.align-items-center
+
+            .col-12.col-lg-6
+
+                h3#curso-titulo-componente.curso-subtitulo Elaboración de tapabocas, gorros y polainas de dotación hospitalaria
+                h1#curso-titulo-tema.curso-titulo Normatividad para el manejo de prendas de dotación hospitalaria
+
+                .brand-line-primary
+
+                if pagina == 'main'
+
+                    .keywords
+                        span.badge.badge-pill.badge-light.mr-2 #Normatividad
+                        span.badge.badge-pill.badge-light.mr-2 #prendas quirúrgicas
+                        span.badge.badge-pill.badge-light.mr-2 #productos de dotación 
+
+
+                    .barra-dots.mt-5
+                        img.img-fluid(src='assets/images/header/icon_dots.svg', alt='alt')
+
+                else 
+                    p.curso-descripcion Para el estudio de esta primera unidad nos enfocaremos en conocer las disposiciones legales y normativa que el Ministerio de Salud y Protección Social ha dispuesto para la elaboración y el manejo de prendas de dotación hospitalaria tales como: tapabocas, gorros y polainas.                
+
+        
+                if pagina == 'home'
+                    a.curso-btn-iniciar.btn.btn-light(href="main.html")
+                        span Iniciar Curso
+
+
+            .col-12.col-lg-6.text-center
+                .d-none.d-lg-block
+                    img(src= srcImagen).curso-imagen
+
+
+mixin referenciaItem(referencia, enlace, tituloenlace="")
+    p= referencia
+        if tituloenlace != ""
+            a(href= enlace, target="_blank").ml-2= tituloenlace
+        else if enlace != ""
+            a(href= enlace, target="_blank").ml-2= enlace
+    hr
+
+
+
+mixin navTemaItem(numero, titulo, ruta)
+    li.list-group-item.nav-tema-item
+        .row.align-items-center
+            if numero == 'play'
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 
+                            i.fa.fa-play
+            else if numero == 'question'
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 
+                            i.fa.fa-question
+            else if numero == 'text'
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 
+                            i.fa.fa-file-text-o
+            else if numero == 'folder'
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 
+                            i.fa.fa-folder-open
+            else if numero == 'references'
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 
+                            i.fa.fa-book
+            else if numero == 'glosary'
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 
+                            i.fa.fa-sort-alpha-asc
+            else
+                .col-auto
+                    .avatar.avatar-sm
+                        span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold= numero
+
+            .col.ml-n2
+                span.nav-tema-item__titulo 
+                    a(href= ruta)= titulo
+            .col-auto                                            
+                a(href= ruta).btn.btn-light.nav-tema-item__btn
+                    | Ver más
+    
+    
+mixin creditosFooter(ruta)
+    footer#Creditos.footer
+        .container
+
+            h1 Créditos               
+            .brand-line-primary
+
+            .row
+                .col-auto
+                  img(src="assets/images/logos/senaLogo_naranja.svg", alt="" style="width:100px")
+                .col
+                  h3.footer-subtitulo.mb-3 ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES 
+                  p.footer-texto.mb-2
+                      | #[strong Ingry Dayanna Bonilla Monzon	 ]<br/>   
+                      span.text-small Lider del equipo                
+
+            .row.mt-5
+                .col-12.col-md-4
+                    h4.footer-subtitulo-2.mt-0 
+                        .fa.fa-caret-right.mr-2
+                        | Contenido Instruccional
+
+                    p.footer-texto.mb-2
+                        | #[strong Gloria Matilde Lee Mejía	 ]<br/>   
+                        span.text-small Responsable del equipo
+
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Comercio y Servicios
+                        br
+                        span.text-small Regional Tolima
+
+
+                    p.footer-texto.mb-2
+                        | #[strong Rafael Nelftalí Lizcano Reyes]<br/>               
+                        span.text-small Asesor pedagógico<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA   
+                        br
+                        span.text-small Regional Santander    
+
+                    p.footer-texto.mb-2
+                        | #[strong Norma Constanza Morales Cruz]<br/>
+                        span.text-small Experta temática<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Contratista Centro de Comercio y Servicios 
+                        br
+                        span.text-small Regional Tolima
+
+                    p.footer-texto.mb-2
+                        | #[strong Lucy Alejandra Gutiérrez Rengifo]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Ingrid Dalleny Mora Táutiva]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Ivonne Nelly Waltero Hernández]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Gina Elizabeth Ortiz García]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Mile Johanna Pava Carvajal]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Camilo Morales]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital 
+                    p.footer-texto.mb-2
+                        | #[strong Carlos Alberto Cuervo Grajales]<br/>   
+                        span.text-small Instructor formación profesional<br/>    
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+                       
+                .col-12.col-md-4
+                    p.footer-texto.mb-2
+                        | #[strong Flor Ángela Montoya Rendón]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Karen Stefany Parra Torres]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Martha Luz Tapias Pulgarín]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Laura Leticia Ramírez Quintero]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong German Molina Ovalle]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Karolina Paniagua Gómez]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Elsa Cecilia Rodríguez Monsalve]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Dayra Maritza Paz Calderón]<br/>   
+                        span.text-small Instructor formación profesional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de Manufactura Textil y del Cuero
+                        br
+                        span.text-small Regional Distrito Capital
+
+                    p.footer-texto.mb-2
+                        | #[strong Liliana Victoria Morales Gualdrón]<br/>   
+                        span.text-small Evaluadora instruccional<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro para la Industria de la Comunicación Gráfica.                         
+
+                .col-12.col-md-4                    
+                    h4.footer-subtitulo-2.mt-0 
+                        .fa.fa-caret-right.mr-2
+                        | Diseño y desarrollo de recursos educativos digitales
+                    
+                    p.footer-texto
+                        | #[strong Francisco José Lizcano Reyes ]<br/>   
+                        span.text-small Responsable del equipo<br/>
+                    p.footer-texto
+                        | #[strong Leyson Fabian Castaño Perez]<br/>   
+                        span.text-small Integración de recursos y pruebas<br/>
+
+                    p.footer-texto                           
+                        | #[strong Daniel Ricardo Mutis Gomez]<br/>  
+                        | #[strong Oleg Litvin]<br/>
+                        | #[strong Yazmin Rocio Figueroa Pacheco]<br/>
+                        span.text-small Diseño Web & Producción Audiovisual<br/>                        
+                    p.footer-texto
+                        | #[strong Magdi Khalifah Gamboa]<br/>                                    
+                        span.text-small Desarrollo Front-End<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA   
+                        br
+                        span.text-small Regional Santander
+
+                    h4.footer-subtitulo-2.mt-5
+                        .fa.fa-caret-right.mr-2
+                        | Gestores de repositorio
+                    
+                    p.footer-texto
+                        | #[strong Kely Alejandra Quiros Duarte ]<br/>   
+                        span.text-small Administrador repositorio de contenidos y gestores de repositorio.<br/>
+                    p.footer-texto
+                        span.text-small.text-uppercase Centro de comercio y servicios  
+                        br
+                        span.text-small Regional Tolima
+
+    section#cc
+        .container
+            .d-flex.flex-column.flex-sm-row
+                span.pr-3
+                    i.icon.cc
+            
+                span
+                    | Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que
+                    | el trabajo original.

@@ -1,0 +1,37 @@
+include mixins/functions
+
+doctype
+html(lang="es")
+    head
+        include includes/head.pug
+
+
+    body#page-main.theme-dark.page-header-textura
+
+        .page-main
+
+            header.sticky-top
+                include includes/page-main_topbar.pug
+
+
+            main.mb-5
+                #page-main-header.page-header
+                    .page-textura
+                        .container
+                            +pageHeader("Tema", "assets/images/header/header_media.svg", "main")
+
+                #mainContent
+                   
+
+
+            footer.mt-5
+                include includes/page-main_control.pug
+
+
+        include includes/aside-menu.pug
+
+
+          
+        script(src="assets/js/vendor.js")
+        script(src="assets/js/global.js")        
+        script(src="assets/js/pages.js")                            

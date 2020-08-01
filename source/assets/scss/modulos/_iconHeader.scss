@@ -1,0 +1,15 @@
+.iconHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;  
+  margin-bottom: 1.5rem;
+  &__bullet {
+    width: 35px;
+    margin-right: 1rem;
+    img {
+      width: 35px;
+      vertical-align: middle;
+    }
+  }  
+}

@@ -1,0 +1,132 @@
+#page-main-aside {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color:#fff;
+    height: 100vh;
+    transition: .3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 1050;
+    box-shadow: 0px 0px 8px $secondary;
+    @media screen and (min-width:$breakpoint-tablet) {
+        max-width: 320px;
+    }
+
+    &.page-main-aside--open {
+        @media screen and (max-width:$breakpoint-small) {
+            width: 100% !important;
+
+            .menu-secondary {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.aside-contenidos {
+    &__header {
+        display: flex;
+        padding: 1rem;
+        background-color: lighten($dark-orange, 15%);
+        font-weight: 700;
+    }
+}
+
+ul#menuMain {
+    margin-bottom: 300px;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+
+    &__item {        
+        border-bottom: 1px solid #8FA5B7;
+    }
+
+    &.submenu {
+        .menu-main__link {
+            padding-left: 2rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: .5rem 1rem;
+        color: $secondary !important;
+        font-weight: 400;
+        transition: all 0.2s ease-in-out;
+        border-left: 4px solid transparent;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $gray-200;
+            color: $primary !important;            
+        }
+    }
+
+    &__link--active {
+        font-weight: 500;
+        background-color: $gray-300 !important;
+        color: $primary !important;  
+        border-right: 4px solid $primary;
+    }
+
+    &__icono {
+        font-size: 1.4em;
+        margin-left: auto;
+    }
+
+}
+
+.menu-secondary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    background-color: $gray-300;
+    width: 0;
+    transition: .3s;
+    z-index: 1050;
+    @media screen and (min-width:$breakpoint-tablet) {
+        max-width: 320px;
+    }
+
+    &__item {        
+        border-bottom: 1px solid #8FA5B7;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 1rem;
+        color: $primary !important;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        border-left: 4px solid transparent;
+        cursor: pointer;
+
+        span i {
+            margin-left: 0;
+        }
+
+        &:hover {
+            background-color: $gray-400 !important;
+            color: $primary !important;            
+        }
+    }
+
+    &__link--active {
+        background-color: $gray-400 !important;
+        color: $primary !important;  
+        border-right: 4px solid $primary !important;
+    }
+
+}

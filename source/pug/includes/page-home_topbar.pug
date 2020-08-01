@@ -1,0 +1,25 @@
+.curso-topbar.justify-content-center.justify-content-md-between
+    
+    a.curso-topbar__logo
+        include ../../assets/images/logos/senaLogo.svg
+
+    a.curso-topbar__menubar.collapsed(data-toggle="collapse", href="#curso-topbar__nav", aria-expanded="false").btn-menu-responsive.d-none
+        span
+        span
+        span
+
+    nav#curso-topbar__nav.curso-topbar__nav.collapse.show.d-none.d-md-block
+
+        ul.curso-topbar__list
+
+            li.curso-topbar__item
+                a.curso-topbar__link(href="#ResultadosAprendizaje")
+                    span.text-white Resultados de Aprendizaje
+
+            li.curso-topbar__item
+                a.curso-topbar__link(href="#IndiceTematico")
+                    span.text-white Índice Temático
+
+            li.curso-topbar__item
+                a.curso-topbar__link(href="#Creditos")
+                    span.text-white Créditos

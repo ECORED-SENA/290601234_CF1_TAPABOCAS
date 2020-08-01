@@ -1,0 +1,19 @@
+.curso-resultados {
+    position: relative;
+
+    &::before {
+        content: '';
+        border-style: solid;
+        border-width:50px 50px 0px 50px;
+        border-color: $body-bg transparent transparent transparent;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -48px;
+        margin-top: -15px; 
+    }
+}
+
+.curso-indice-tematico {
+    background-color: #fff;
+}

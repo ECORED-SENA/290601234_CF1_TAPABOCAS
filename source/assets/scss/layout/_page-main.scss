@@ -1,0 +1,60 @@
+#page-main,
+.page-main {
+    transition: .3s;
+}
+
+#mainContent {
+    margin-bottom: 200px;
+}
+
+.page-topbar {
+
+    padding-bottom: .5em;
+    background-color: #fff;
+
+    &__menu-icon {
+        display: block;
+        background-color: transparent !important;
+    }
+
+    &__menu-title {
+        display: block;
+        font-size: .8em;
+        text-align: center;
+        margin-top: -7px;
+    }
+
+    &__logo {
+        width: 48px;
+    }
+}
+
+.page-control {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 500;
+
+    &-link, 
+    &-link:not([href]) {
+        cursor: pointer;
+        color: $primary !important;
+        transition: all .2s ease-in-out;
+    }    
+    
+    &-prev {
+        background-color: $gray-400;
+        &:hover {
+            background-color: $gray-300;
+        }
+    }
+
+    &-next {
+        background-color: lighten($dark-orange, 15%);
+        &:hover {
+            background-color: lighten($dark-orange, 10%);
+        }        
+    }
+}

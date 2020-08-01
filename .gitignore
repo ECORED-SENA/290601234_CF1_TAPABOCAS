@@ -1,0 +1,6 @@
+node_modules
+/**.zip
+/source/**.zip
+/public/**.zip
+.DS_Store
+public/media/**/*.story

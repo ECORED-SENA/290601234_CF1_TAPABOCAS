@@ -1,0 +1,30 @@
+.card__border-bottom {
+    border-bottom: 4px solid $brand-color-light;
+}
+
+.card-border-bottom {    
+    .card {
+        border:0px;
+        border-bottom: 4px solid $brand-color-light;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+#mainContent .card-body p {
+    margin-bottom: 0px;
+}
+
+.card .avatar-img {
+    object-fit: contain;
+}
+
+.card-transparent {
+    .card {
+        background-color: transparent;
+
+        .card-body {
+            background-color: #fff;
+        }
+    }
+}

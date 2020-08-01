@@ -1,0 +1,85 @@
+.curso-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    &__logo {
+        
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__nav {
+        display: block;
+        flex: 0 1 auto;
+        margin-left: auto;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 450px;
+    }   
+
+    &__link {
+        color: $base-color-dark;
+    }
+
+
+    &__menubar {
+        display: none;
+    }
+
+
+    @media screen and (max-width: $breakpoint-small) {
+
+        padding: 1rem 1rem 0;
+        margin-bottom: 2rem;
+        margin-top: -2rem;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        background-color: $white;
+
+        &__logo {
+            padding-bottom: .5rem;
+        }
+
+        &__menubar {
+            display: block;
+            color: $base-color-dark;
+        }
+
+        &__nav {
+            flex: 1 1 100%;
+        }
+
+         &__list {
+             flex-direction: column;
+             margin-top: .5rem;
+             width: 100%;
+         }
+
+         &__item {
+            width: 100%;
+
+            &:hover {
+                background-color: $gray-200;
+            }
+         }
+
+          &__link {
+              display: block;
+              padding: .8rem 0;
+              text-align: center;
+              border-bottom: 1px solid $base-border-color;
+          }
+    }
+}
