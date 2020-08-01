@@ -1,0 +1,134 @@
+include mixins/functions
+
+doctype
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        title Ruta de aprendizaje
+        meta(meta name="description" content="Ruta de aprendizaje programa Salud penitenciaria.")    
+        link(rel="icon",type="image/svg+xml",href="assets/images/logos/senaLogo.svg")
+        link(rel="stylesheet", href="assets/fonts/feather/feather.css")
+        link(rel="stylesheet", href="assets/fonts/fontawesome/css/font-awesome.css")
+        link(href='assets/css/fancybox.css', rel='stylesheet')
+        link(href='assets/css/animate.css', rel='stylesheet')
+        link(rel="stylesheet", href="assets/css/main.css")
+
+
+    body#page-home.theme-dark.page-header-textura
+
+        header#CursoPresentacion.curso-presentacion.page-header
+            .page-textura
+                .container
+
+                    .curso-topbar
+                        
+                        a.curso-topbar__logo
+                            include ../assets/images/logos/senaLogo.svg
+
+                    .curso-portada
+
+                        .row.align-items-center
+
+                            .col-12.col-lg-6
+
+                                h3.curso-subtitulo Salud Penitenciaria
+                                h1.curso-titulo Ruta de aprendizaje
+
+                                .brand-line-primary
+
+                                p.curso-descripcion A continuación se presentan las actividades de aprendizaje que debe realizar el aprendiz durante el proceso formativo, estableciendo los tiempos, recursos educativos y evidencias que le permitirán  cumplir con los resultados de aprendizaje definidos para el programa de formación Salud Penitenciaria.
+                    
+
+                            .col-12.col-lg-6
+                                .d-none.d-lg-block
+                                    img(src="assets/images/header/header_ruta.svg")           
+
+        section#ruta.curso-resultados.section.bg-base-light.container
+
+            .subtitulo-guion.my-4
+                h2 Guía de aprendizaje 1 <br><small class="text-muted letter-spacing-1x font-weight-bold">Duración: 48 horas</small>
+
+            .timeline__wrapper.jumbotron.py-3.px-5
+
+                section#timeline
+                    .timeline__item.br--bottom   
+                        img(src="assets/images/ruta/inicio.svg", alt="")            
+                        p Inicio              
+                    .timeline-card-wrapper                              
+                        .timeline-card.card--step1
+                            .timeline-card__head
+                                .number-box
+                                    span 01
+                                .title-box #[strong Actividad de aprendizaje:] Describir los principales componentes del contexto institucional de la población privada de la libertad bajo el marco normativo e histórico del Sistema Penitenciario y Carcelario. 
+                            .timeline-card__body            
+                                .body-content-wrapper            
+                                    p #[strong Resultado de aprendizaje]</br>
+                                    ul.bg-color-dark
+                                        li 
+                                            span Reconocer las situaciones de la población privada de la libertad de acuerdo con los principales componentes del sistema penitenciario y carcelario.
+                                        li 
+                                            span Valorar la apropiación de la información obtenida del sistema penitenciario y carcelario de acuerdo con la normatividad vigente.
+                                    .tl-hr-divider
+                                    p #[strong Material de formación]</br>Marco Normativo y Sistemas Penitenciarios
+                                    .tl-hr-divider
+                                    p #[strong Evidencias:] 
+                                        ul.bg-color-dark
+                                                li 
+                                                    span #[strong Evidencia de conocimiento AA1_EV01. Cuestionario. ] Identificar los principales componentes del contexto institucional, normativo y carcelario del sistema penitenciario y carcelario.
+                                                li 
+                                                    span #[strong Evidencia de producto AA1_EV02. Ensayo. ] Proponer acciones de mejora en la prestación de servicios de salud de acuerdo al análisis de información del sistema penitenciario y carcelario.
+
+                        .timeline-card.card--step1
+                            .timeline-card__head
+                                .number-box
+                                    span 02
+                                .title-box #[strong Actividad de aprendizaje:] Interpretar los derechos que le asisten a la población privada de la libertad, las rutas para materializar el goce efectivo de tales derechos y los principios éticos.
+                            .timeline-card__body            
+                                .body-content-wrapper            
+                                    p #[strong Resultado de aprendizaje]</br>
+                                    ul.bg-color-dark
+                                        li 
+                                            span Aplicar cultura de buen trato en la atención en salud a la población privada de la libertad teniendo en cuenta el enfoque de derechos, diferencial y los principios éticos.
+                                    .tl-hr-divider
+                                    p #[strong Material de formación]</br>DDHH y ética médica
+                                    .tl-hr-divider
+                                    p #[strong Evidencias:] 
+                                        ul.bg-color-dark
+                                            li 
+                                                span #[strong Evidencia de producto AA2_EV03. Foro. ]   Comprender la perspectiva de la salud penitenciaria en los dilemas éticos en el ejercicio del trabajo en salud en el sistema penitenciario.   
+
+                        .timeline-card.card--step1
+                            .timeline-card__head
+                                .number-box
+                                    span 03
+                                .title-box #[strong Actividad de aprendizaje:] Establecer la importancia del trabajo en ambientes seguros y protegidos en la construcción de la dignidad del ser humano y en los procesos de rehabilitación de la PPL.
+                            .timeline-card__body            
+                                .body-content-wrapper            
+                                    p #[strong Resultado de aprendizaje]</br>
+                                    ul.bg-color-dark
+                                        li 
+                                            span Proponer acciones de prevención y atención de riesgos laborales en el entorno penitenciario teniendo en cuenta el sistema de gestión de la seguridad y salud en el trabajo.
+                                    .tl-hr-divider
+                                    p #[strong Material de formación]</br>Sistema de Seguridad y Salud en el Trabajo
+                                    .tl-hr-divider
+                                    p #[strong Evidencias:] 
+                                        ul.bg-color-dark
+                                            li 
+                                                span #[strong Evidencia de producto AA3_EV04. Presentación. ] Construir una presentación que indique las acciones de prevención que deben utilizar en la exposición de un riesgo biológico.         
+                    .timeline__item.br--top                
+                        img(src="assets/images/ruta/certificacion.svg", alt="")    
+                        p Certificación        
+                    
+
+        +creditosFooter("assets/images/logos/senaLogo.svg")
+
+
+        script(src="assets/js/vendor.js")
+        script(src="assets/js/global.js")        
+        script(src="assets/js/pages.js")
+
+
+
+
+
