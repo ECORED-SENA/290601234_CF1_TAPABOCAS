@@ -18,7 +18,6 @@ const javascriptObfuscator = require('gulp-javascript-obfuscator');
 const clear = require("clear");
 const exit = require("exit");
 const notify = require("gulp-notify");
-const del = require('del');
 
 const src = './source';
 const pub = './public';
@@ -43,6 +42,7 @@ const paths = {
   },
   pugRoot: {
     src: `${src}/pug/*.pug`,
+    local: `!${src}/pub/material.pug`,
     inc: `${src}/pug/includes/**/*.{pug,html}`,
     mixins: `${src}/pug/mixins/**/*.{pug,html}`,
     dest: `${pub}/`,
@@ -100,18 +100,13 @@ const paths = {
 // COMPILAR PUG
 gulp.task('pugRoot', done => {
   gulp
-    .src([
-      paths.pugRoot.src,
-      `!${src}/pug/ruta.pug`,
-      `!${src}/pug/material.pug`,
-      `!${src}/pug/info.pug`,
-    ])
+    .src([paths.pugRoot.src, paths.pugRoot.local])
     // PREVIENE QUE LOS PROCESOS GULP.WATCH SE DETENGA AL ENCONTRAR UN ERROR
     .pipe(plumber())
     // COMPLIA PUG
     .pipe(
       pug({
-        cres: {},
+        locals: {}
       })
     )
     // ENBELLECE EL HTML
@@ -132,7 +127,7 @@ gulp.task('pugPages', done => {
     // COMPLIA PUG
     .pipe(
       pug({
-        cres: {}
+        locals: {}
       })
     )
 
@@ -232,142 +227,21 @@ gulp.task('servidor', done => {
   done();
 });
 
-gulp.task('borrarRuta', done => {
-  return del(`${pub}/ruta.html`);
-});
-
-gulp.task('borrarInfo', done => {
-  return del(`${pub}/info.html`);
-});
 /**
  * @description
  * Crea la carpeta ZIP con el contenido de la multimedia y lo almacena en la carpeta de descargas.
  */
-gulp.task('pugMaterial', () => {
-  return gulp
-    .src(`${src}/pug/material.pug`)
-    // PREVIENE QUE LOS PROCESOS GULP.WATCH SE DETENGA AL ENCONTRAR UN ERROR
-    .pipe(plumber())
-    // COMPLIA PUG
-    .pipe(
-      pug({
-        cres: {}
-      })
-    )
-    // ENBELLECE EL HTML
-    .pipe(prettify({ indent_size: 4 }))
-    // GUARDA EL ARCHIVO HTML
-    .pipe(gulp.dest(`${pub}/`))
-});
-
 gulp.task('crearZip', () => {
   return gulp
     .src([
       `./${pub}/**/*.*`,
-      `!${pub}/config/**/*.*`,
       `!${pub}/pages/**/*.*`,
+      `!${pub}/config/**/*.*`,
+      `!${pub}/download/**/*.*`,
       `!${pub}/index.html`,
       `!${pub}/main.html`,
-      `!${pub}/ruta.html`,
-      `!${pub}/info.html`
     ])
     .pipe(gulpZip(nameFileZIP))
-    .pipe(gulp.dest(`./${pub}/download`))
-
-    .pipe(notify("Descargable creado: <%= file.relative %>"));
-});
-gulp.task('borrarMaterial', done => {
-  return del(`${pub}/material.html`);
-});
-gulp.task('material',
-  gulp.series(
-    'pugMaterial',
-    'crearZip',
-    'borrarMaterial'
-  )
-);
-
-/**
- * @description
- * Crea la carpeta ZIP con el contenido de la multimedia y lo almacena en la carpeta de descargas.
- */
-gulp.task('pugRuta', () => {
-  return gulp
-    .src(`${src}/pug/ruta.pug`)
-    // PREVIENE QUE LOS PROCESOS GULP.WATCH SE DETENGA AL ENCONTRAR UN ERROR
-    .pipe(plumber())
-    // COMPLIA PUG
-    .pipe(
-      pug({
-        cres: {}
-      })
-    )
-    // ENBELLECE EL HTML
-    .pipe(prettify({ indent_size: 4 }))
-    // GUARDA EL ARCHIVO HTML
-    .pipe(gulp.dest(`${pub}/`))
-});
-
-gulp.task('crearZipRuta', () => {
-  return gulp
-    .src([
-      `./${pub}/**/*.*`,
-      `!${pub}/index.html`,
-      `!${pub}/main.html`,
-      `!${pub}/download/**/*.*`,
-      `!${pub}/js/**/*.*`,
-      `!${pub}/pages/**/*.*`,
-      `!${pub}/media/**/*.*`,
-      `!${pub}/config/**/*.*`,
-      `!${pub}/assets/images/pages/*.*`,
-      `!${pub}/assets/images/icons/*.*`,
-      `!${pub}/assets/images/info/*.*`,
-      `!${pub}/material.html`,
-      `!${pub}/info.html`,
-    ])
-    .pipe(gulpZip("ruta_aprendizaje.zip"))
-    .pipe(gulp.dest(`./${pub}/download`))
-
-    .pipe(notify("Descargable creado: <%= file.relative %>"));
-});
-
-gulp.task("pugInfo", () => {
-  return (
-    gulp
-      .src(`${src}/pug/info.pug`)
-      // PREVIENE QUE LOS PROCESOS GULP.WATCH SE DETENGA AL ENCONTRAR UN ERROR
-      .pipe(plumber())
-      // COMPLIA PUG
-      .pipe(
-        pug({
-          cres: {},
-        })
-      )
-      // ENBELLECE EL HTML
-      .pipe(prettify({ indent_size: 4 }))
-      // GUARDA EL ARCHIVO HTML
-      .pipe(gulp.dest(`${pub}/`))
-  );
-});
-
-gulp.task("crearZipInfo", () => {
-  return gulp
-    .src([
-      `./${pub}/**/*.*`,
-      `!${pub}/index.html`,
-      `!${pub}/main.html`,
-      `!${pub}/download/**/*.*`,
-      `!${pub}/js/**/*.*`,
-      `!${pub}/pages/**/*.*`,
-      `!${pub}/media/**/*.*`,
-      `!${pub}/config/**/*.*`,
-      `!${pub}/assets/images/pages/*.*`,
-      `!${pub}/assets/images/icons/*.*`,
-      `!${pub}/assets/images/ruta/*.*`,
-      `!${pub}/material.html`,
-      `!${pub}/ruta.html`,
-    ])
-    .pipe(gulpZip("informacion_programa.zip"))
     .pipe(gulp.dest(`./${pub}/download`))
 
     .pipe(notify("Descargable creado: <%= file.relative %>"));
@@ -378,7 +252,7 @@ gulp.task("salir", () => {
 });
 
 gulp.task('watch', done => {  
-  gulp.watch([paths.pugRoot.src, paths.pugRoot.inc, paths.pugPages.src, paths.pugRoot.mixins], gulp.series('pugRoot','pugPages'));
+  gulp.watch([paths.pugRoot.src, paths.pugRoot.inc, paths.pugRoot.local, paths.pugPages.src, paths.pugRoot.mixins], gulp.series('pugRoot','pugPages'));
   gulp.watch(paths.sass.inc, gulp.series('sass'));
   gulp.watch(paths.cssVendor.src, gulp.series("cssVendor"));
   gulp.watch(paths.json.src, gulp.series('json'))
@@ -389,38 +263,12 @@ gulp.task('watch', done => {
   done();
 });
 
-gulp.task('ruta',
-  gulp.series(
-    'pugRuta',
-    'crearZipRuta',
-    'servidor',
-    'watch'
-  )
-);
-
-gulp.task("info", gulp.series("pugInfo", "crearZipInfo", 'servidor', 'watch'));
-
-gulp.task('desarrollo',
-  gulp.series(
-    'json',
-    'media',
-    'font-awesome',
-    'jsVendor',
-    'jsGlobal',
-    'jsContent',
-    'pugRoot',
-    'pugPages',
-    'sass',
-    'cssVendor',
-    'servidor',
-    "borrarRuta",
-    "borrarInfo",    
-    'watch'
-  )
-);
-
+/**
+ * @description
+ * Inicia la carga del menú definido por defecto con las funciones permitidas.
+ */
 gulp.task(
-  "produccion",
+  "default",
   gulp.series(
     "json",
     "media",
@@ -432,31 +280,7 @@ gulp.task(
     "pugPages",
     "sass",
     "cssVendor",
-    "borrarRuta",
-    "borrarInfo",
-    "crearZip"
+    "servidor",
+    "watch"
   )
 );
-/**
- * @description
- * Inicia la carga del menú definido por defecto con las funciones permitidas.
- */
-gulp.task('default', () => {
-  clear();
-  console.log('Versión: 1.0');
-  return gulp
-    .src('package.json')
-    .pipe(gulpPrompt.prompt({
-      type: 'list',
-      name: 'menu',
-      message: 'Seleccione una acción:',
-      choices: [
-        'desarrollo',
-        'produccion',
-        'salir'
-      ],
-      pageSize: '5'
-    }, (res) => {
-      gulp.series(res.menu)();
-    }));
-});
